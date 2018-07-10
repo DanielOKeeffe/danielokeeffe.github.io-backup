@@ -1,0 +1,359 @@
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto 80px auto auto 120px;
+	background-color: #618685;
+	padding: 10px;
+	max-width: 1200px;
+	width: 90%;
+	margin: 2rem auto;
+}
+
+.grid-item {
+	display: flex;
+	align-items: center;
+	background-color: #618685;
+	/*border: 1px solid rgba(0, 0, 0, 0.8);*/
+	padding: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+}
+
+.info {
+	display: flex;
+	align-items: flex-start;
+	background-color: #fefbd8;
+	flex-direction: column;
+	font-family: 'Biryani', sans-serif;
+	grid-column: 1/3;
+}
+
+.nav {
+	display: flex;
+	background-color: #fefbd8;
+	justify-content: center;
+	padding: 0px;
+}
+
+.nav ul {
+	display: flex;
+	background-color: #d5f4e6;
+	font-size: 20px;
+	justify-content: space-between;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 400px;
+}
+
+.nav li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.nav li a:hover {
+	background-color: #618685;
+	color: white;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+}
+
+.headshot {
+	width: 200px;
+}
+
+.skillsNetworking {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.bio {
+	display: flex;
+	flex-direction: column;
+}
+
+.projects {
+	display: flex;
+	background-color: #d5f4e6;
+	font-size: 30px;
+	grid-column: 1/-1;
+	justify-content: center;
+}
+
+article img {
+	max-width: 100%;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.vpsCollapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .vpsCollapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.vpsDescription {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.vpaCollapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .vpaCollapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.vpaDescription {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.reviewsCollapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .reviewsCollapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.reviewsDescription {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+#vpShelter {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#vpShelter:hover {opacity: 0.7;}
+
+#vpAmok {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#vpAmok:hover {opacity: 0.7;}
+
+#reviewsImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reviewsImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-height: auto;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closeVps {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.closeVps:hover,
+.closeVps:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The Close Button */
+.closeVpa {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.closeVpa:hover,
+.closeVpa:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The Close Button */
+.closeReviews {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.closeReviews:hover,
+.closeReviews:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.vpshelter {
+	display: flex;
+	background-color: #d5f4e6;
+	flex-direction: column;
+}
+
+.vpamok {
+	display: flex;
+	background-color: #d5f4e6;
+	flex-direction: column;
+}
+
+.reviews {
+	display: flex;
+	background-color: #d5f4e6;
+	flex-direction: column;
+}
+
+.vpshelterSkills {
+	display: flex;
+	align-items: flex-start;
+	background-color: #d5f4e6;
+	flex-direction: column;
+}
+
+.vpamokSkills {
+	display: flex;
+	align-items: flex-start;
+	background-color: #d5f4e6;
+	flex-direction: column;
+}
+
+.reviewsSkills {
+	display: flex;
+	align-items: flex-start;
+	background-color: #d5f4e6;
+	flex-direction: column;
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	grid-column: 1/-1;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-envelope {
+	background: #dd4b39;
+	color: white;
+	margin: 0.5em;
+}
+
+.fa-linkedin {
+	background: #007bb5;
+	color: white;
+	margin: 0.5em;
+}
+
+.fa-github {
+	background: #ffffff;
+	color: black;
+	margin: 0.5em;
+}
+
