@@ -99,3 +99,16 @@ var spanReviews = document.getElementsByClassName("closeReviews")[0];
 spanReviews.onclick = function() { 
   modalReviews.style.display = "none";
 }
+
+// Activate Carousel
+$("#myCarousel").carousel();
+
+// Enable Carousel Indicators
+$(".item").click(function(){
+    $("#myCarousel").carousel(1);
+});
+
+// Enable Carousel Controls
+$(".left").click(function(){
+    $("#myCarousel").carousel("prev");
+});

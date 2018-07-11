@@ -28,14 +28,14 @@
 	grid-column: 1/3;
 }
 
-.nav {
+.topnav {
 	display: flex;
 	background-color: #fefbd8;
 	justify-content: center;
 	padding: 0px;
 }
 
-.nav ul {
+.topnav ul {
 	display: flex;
 	background-color: #d5f4e6;
 	font-size: 20px;
@@ -46,14 +46,14 @@
 	width: 400px;
 }
 
-.nav li a {
+.topnav li a {
 	display: block;
 	color: #000;
 	padding: 8px 16px;
 	text-decoration: none;
 }
 
-.nav li a:hover {
+.topnav li a:hover {
 	background-color: #618685;
 	color: white;
 }
@@ -356,4 +356,3 @@ article img {
 	color: black;
 	margin: 0.5em;
 }
-
